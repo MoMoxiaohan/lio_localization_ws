@@ -1,0 +1,2 @@
+livox_ros_driver2-master:pointcloud_to_laserscan:sentry_comm/sentry_serial:sentry_decision:sentry_nav:sentry_slam/FAST_LIO:sentry_slam/FAST_LIO_LOCALIZATION:sentry_slam/Point-LIO:sentry_tools/pcd2pgm_package/pcd2pgm:sentry_tools/velocity_smoother_ema
+-DCATKIN_DEVEL_PREFIX=/home/liu/vinci_projects/lio_localization_ws/devel -DCMAKE_INSTALL_PREFIX=/home/liu/vinci_projects/lio_localization_ws/install -G Unix Makefiles

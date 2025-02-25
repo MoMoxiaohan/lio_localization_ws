@@ -1,0 +1,8 @@
+prefix=/home/liu/vinci_projects/lio_localization_ws/install
+
+Name: pointcloud_to_laserscan
+Description: Description of pointcloud_to_laserscan
+Version: 1.4.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib -lpointcloud_to_laserscan
+Requires: roscpp message_filters nodelet sensor_msgs tf2 tf2_ros

@@ -1,0 +1,15 @@
+<launch>
+    <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen" clear_params="true" args="/map:=prior_map /odom:=Odometry">
+        <rosparam file="$(find sentry_nav)/param2/move_base_params.yaml" command="load" />
+        <rosparam file="$(find sentry_nav)/param2/global_costmap_params.yaml" command="load" />
+        <rosparam file="$(find sentry_nav)/param2/local_costmap_params.yaml" command="load" />
+        <rosparam file="$(find sentry_nav)/param2/control.yaml" command="load" />
+        <rosparam file="$(find sentry_nav)/param2/Nav_params.yaml" command="load" />
+        
+    </node>
+    <node pkg="sentry_nav" type="trans_tf_2d" name="trans_tF_2d" />
+    <!-- <node pkg="sentry_nav" type="trans_tf_2d_odom" name="trans_tF_2d_odom" />
+    <node pkg="sentry_nav" type="trans_odom_2d" name="trans_odom_2d" /> -->
+	<include file="$(find velocity_smoother_ema)/launch/velocity_smoother_ema.launch">
+	</include>
+</launch>

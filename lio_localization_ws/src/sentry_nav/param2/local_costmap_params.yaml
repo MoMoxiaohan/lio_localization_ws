@@ -1,0 +1,9 @@
+local_costmap:
+  global_frame: "robot_foot_init"                  # 全局坐标系
+  robot_base_frame: "body_foot"        # 机器人坐标系
+  update_frequency: 1.0                # 更新频率（Hz）
+  publish_frequency: 0.5               # 发布频率（Hz）
+  transform_tolerance: 0.5             # TF变换容忍时间（秒）
+  static_map: false                    # 不使用静态地图
+  rolling_window: false                # 不启用滚动窗口
+  enabled: false                       # 禁用局部代价地图

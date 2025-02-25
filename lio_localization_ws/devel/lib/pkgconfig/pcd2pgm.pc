@@ -1,0 +1,8 @@
+prefix=/home/liu/vinci_projects/lio_localization_ws/devel
+
+Name: pcd2pgm
+Description: Description of pcd2pgm
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

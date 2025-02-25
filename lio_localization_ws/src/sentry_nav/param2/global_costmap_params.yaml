@@ -1,0 +1,27 @@
+global_costmap:
+  global_frame: "map"                  # 全局坐标系
+  robot_base_frame: "body_foot"        # 机器人坐标系
+  update_frequency: 1.0                # 更新频率（Hz）
+  publish_frequency: 0.5               # 发布频率（Hz）
+  transform_tolerance: 0.5             # TF变换容忍时间（秒）
+  resolution: 0.1                      # 地图分辨率（米/像素）
+  static_map: true                     # 使用静态地图
+
+  # 膨胀层配置
+  plugins:
+    - {name: static_layer, type: "costmap_2d::StaticLayer"}
+    - {name: inflation_layer, type: "costmap_2d::InflationLayer"}
+
+  inflation_layer:
+    inflation_radius: 0.5              # 膨胀半径（米）
+    cost_scaling_factor: 10.0          # 膨胀代价缩放因子
+
+  # 机器人足迹配置
+  footprint: [[-0.3, -0.3], [-0.3, 0.3], [0.3, 0.3], [0.3, -0.3]]  # 四边形足迹
+  footprint_padding: 0.01             # 足迹额外膨胀（米）
+
+  # 障碍物检测配置
+  obstacle_layer:
+    enabled: true
+    observation_sources: laser_scan
+    laser_scan: {sensor_frame: laser_frame, data_type: LaserScan, topic: /scan, marking: true, clearing: true}

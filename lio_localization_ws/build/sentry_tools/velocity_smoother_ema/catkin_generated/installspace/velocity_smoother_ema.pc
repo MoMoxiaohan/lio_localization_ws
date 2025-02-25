@@ -1,0 +1,8 @@
+prefix=/home/liu/vinci_projects/lio_localization_ws/install
+
+Name: velocity_smoother_ema
+Description: Description of velocity_smoother_ema
+Version: 0.0.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib -lvelocity_smoother_ema
+Requires: 

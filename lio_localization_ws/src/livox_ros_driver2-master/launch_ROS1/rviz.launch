@@ -1,0 +1,4 @@
+<launch>
+<node name="livox_rviz" pkg="rviz" type="rviz" respawn="true"
+				args="-d $(find livox_ros_driver2)/config/display_point_cloud_ROS1.rviz"/>
+</launch>

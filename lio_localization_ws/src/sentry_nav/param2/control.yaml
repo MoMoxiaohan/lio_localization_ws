@@ -1,0 +1,18 @@
+controller:
+  holonomic_robot: true                # 全向机器人
+  max_vel_x: 5.0                       # 最大线速度（x方向，米/秒）
+  max_vel_y: 5.0                       # 最大线速度（y方向，米/秒）
+  max_vel_theta: 1.0                   # 最大角速度（弧度/秒）
+
+  min_vel_x: 0.0                       # 最小线速度（x方向，米/秒）
+  min_vel_y: 0.0                       # 最小线速度（y方向，米/秒）
+  min_vel_theta: 0.0                   # 最小角速度（弧度/秒）
+
+  acc_lim_x: 2.5                       # x方向最大加速度（米/秒²）
+  acc_lim_y: 2.5                       # y方向最大加速度（米/秒²）
+  acc_lim_theta: 2.0                   # 最大角加速度（弧度/秒²）
+
+  yaw_goal_tolerance: 0.1              # 目标点角度容忍度（弧度）
+  xy_goal_tolerance: 0.2               # 目标点位置容忍度（米）
+
+  latch_xy_goal_tolerance: false       # 禁用目标点锁定
