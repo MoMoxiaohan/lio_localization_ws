@@ -1,0 +1,19 @@
+base_global_planner: global_planner/GlobalPlanner
+RRT:
+  # 基本参数
+  goal_bias: 0.05                      # 目标偏向概率（0-1）
+  max_iterations: 10000                # 最大迭代次数
+  interpolation_step: 0.1              # 插值步长
+  step_size: 0.2                       # 采样步长
+
+  # 碰撞检测参数
+  min_obstacle_dist: 2.0               # 最小障碍物距离
+  include_costmap_obstacles: true      # 是否包含代价地图障碍物
+
+  # 路径优化参数
+  smooth_path: true                    # 是否平滑路径
+  smooth_cost: 0.1                     # 平滑代价权重
+
+  # 可视化参数
+  publish_tree: true                   # 是否发布搜索树
+  publish_path: true                   # 是否发布路径

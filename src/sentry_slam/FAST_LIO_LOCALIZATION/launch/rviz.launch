@@ -1,0 +1,7 @@
+<launch>
+
+    <arg name="rviz" default="true" />
+	<group if="$(arg rviz)">
+	    <node launch-prefix="nice" pkg="rviz" type="rviz" name="rviz" args="-d $(find fast_lio_localization)/rviz_cfg/localization.rviz" />
+	</group>
+</launch>

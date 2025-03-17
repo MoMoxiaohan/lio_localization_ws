@@ -1,0 +1,34 @@
+base_local_planner: teb_local_planner/TebLocalPlannerROS
+TebLocalPlannerROS:
+  # 基本参数
+  odom_topic: camera_init                     # 里程计话题
+  map_frame: map                       # 地图坐标系
+  robot_base_frame: body_foot          # 机器人基坐标系
+
+  # 轨迹优化参数
+  dt_ref: 0.3                          # 时间离散间隔
+  dt_hysteresis: 0.1                   # 时间离散间隔的滞后值
+  max_samples: 500                     # 最大采样点数
+  global_plan_overwrite_orientation: true  # 是否覆盖全局路径的方向
+
+  # 机器人运动学参数
+  max_vel_x: 0.5                       # 最大线速度
+  max_vel_x_backwards: 0.2             # 最大倒车线速度
+  max_vel_theta: 1.0                   # 最大角速度
+  acc_lim_x: 0.5                       # 线加速度限制
+  acc_lim_theta: 0.5                   # 角加速度限制
+
+  # 障碍物处理参数
+  min_obstacle_dist: 1.0               # 最小障碍物距离
+  include_costmap_obstacles: true      # 是否包含代价地图障碍物
+  costmap_obstacles_behind_robot_dist: 1.0  # 考虑机器人后方障碍物的距离
+
+  # 路径优化参数
+  weight_kinematics_forward_drive: 1.0  # 前向运动的权重
+  weight_kinematics_turning: 1.0        # 转向运动的权重
+  weight_optimaltime: 1.0               # 时间最优的权重
+  weight_obstacle: 50.0                 # 障碍物避让的权重
+
+  # 可视化参数
+  publish_feedback: true                # 是否发布反馈信息
+  visualize_with_time_as_color: true    # 是否以时间作为颜色可视化

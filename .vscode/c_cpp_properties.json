@@ -1,0 +1,24 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/opt/ros/noetic/include/**",
+        "/home/liu/lio_localization_ws/src/sentry_slam/FAST_LIO/include/**",
+        "/home/liu/lio_localization_ws/src/sentry_slam/FAST_LIO_LOCALIZATION/include/**",
+        "/home/liu/lio_localization_ws/src/sentry_slam/Point-LIO/include/**",
+        "/home/liu/lio_localization_ws/src/sentry_tools/velocity_smoother_ema/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}

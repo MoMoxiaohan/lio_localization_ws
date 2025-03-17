@@ -1,0 +1,5 @@
+NavfnROS:
+  allow_unknown: false                 # 不允许路径穿越未知区域
+  planner_window_x: 2.0                # 规划窗口大小（x方向，米）
+  planner_window_y: 2.0                # 规划窗口大小（y方向，米）
+  default_tolerance: 0.5               # 默认路径容忍度（米）

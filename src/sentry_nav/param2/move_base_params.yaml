@@ -1,0 +1,13 @@
+# move_base主配置
+base_global_planner: "navfn/NavfnROS"  # 全局路径规划器
+base_local_planner: ""                 # 禁用局部路径规划器
+controller_frequency: 10.0             # 控制发布频率（Hz）
+
+planner_frequency: 1.0                 # 全局路径规划频率（Hz）
+planner_patience: 5.0                  # 全局规划超时时间（秒）
+recovery_behavior_enabled: false       # 禁用恢复行为
+clearing_rotation_allowed: false       # 禁用原地旋转清理障碍物
+
+# 全局路径规划失败后是否重新规划
+oscillation_timeout: 0.0               # 禁用振荡超时
+oscillation_distance: 0.0              # 禁用振荡距离
